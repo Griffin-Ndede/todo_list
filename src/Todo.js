@@ -2,26 +2,30 @@ import React, {useState} from 'react'
 
 
 function Todo() {
-    const [tasks, setTasks] = useState([
-        {
-        id: 1,
-        text: 'Doctor Appointment',
-        completed: true
-        },
-        {
-        id: 2,
-        text: 'Meeting at School',
-        completed: false
+    const [tasks, setTasks] = useState("")
+    const [list, setList] = useState([])
+
+    function handleInputChange(e){
+       setTasks(e.target.value)
+    }
+    function handleAddTask(todo){
+        const newTask ={
+            id: Math.random(),
+            task : todo
         }
-        ]);
+        setList([...list, newTask])
+        setTasks("")
+    }
   return (
     <>
-        <div>{tasks.map((task) => (
-            <div key={task.id}>
-                <h1>{task.text}</h1>
-                <input type='checkbox' checked={task.completed}/>
+        <section>
+            <h1>To do list</h1>
+            <input type='text' placeholder='add item ...'value={tasks} onChange={handleInputChange}/> 
+            <button type='submit' onClick={() => handleAddTask(tasks)}>Add Item</button>
+            <div>
+                <p></p>
             </div>
-        ))}</div>
+        </section>
     </>
   )
 }
