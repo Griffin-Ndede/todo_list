@@ -16,7 +16,10 @@ function Todo() {
         setList([...list, newTask])
         setTasks("")
     }
-    console.log(list)
+    function handleDeleteTodo(id){
+        const newList = list.filter((todo) => todo.id !== id);
+        setList(newList)
+    }
   return (
     <>
         <section>
@@ -25,7 +28,11 @@ function Todo() {
             <button type='submit' onClick={() => handleAddTask(tasks)}>Add Item</button>
             <div>
                 {list.map((listitem) =>(
-                    <p>{listitem.task}</p>
+                    <div key={listitem.id}>
+                        <p>{listitem.task}</p>
+                        <p>{new Date().toLocaleString()}</p>
+                        <button onClick={() => handleDeleteTodo(listitem.id)}>Delete</button>
+                    </div>
                 ))}
             </div>
         </section>
