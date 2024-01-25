@@ -16,6 +16,7 @@ function Todo() {
         setList([...list, newTask])
         setTasks("")
     }
+    console.log(list)
   return (
     <>
         <section>
@@ -23,7 +24,9 @@ function Todo() {
             <input type='text' placeholder='add item ...'value={tasks} onChange={handleInputChange}/> 
             <button type='submit' onClick={() => handleAddTask(tasks)}>Add Item</button>
             <div>
-                <p></p>
+                {list.map((listitem) =>(
+                    <p>{listitem.task}</p>
+                ))}
             </div>
         </section>
     </>
