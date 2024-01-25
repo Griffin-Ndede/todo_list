@@ -54,8 +54,8 @@ function Todo() {
         </div>
         <div>
           {list.map((listitem) => (
-            <div key={listitem.id} id='todolist'>
-              <h2>{listitem.task}</h2>
+            <ul key={listitem.id} id='todolist'>
+              <li>{listitem.task}</li>
               <p>{new Date().toLocaleString()}</p>
               <button
                 onClick={() => handleDeleteTodo(listitem.id)}
@@ -63,7 +63,7 @@ function Todo() {
               >
                 Delete
               </button>
-            </div>
+            </ul>
           ))}
         </div>
       </section>

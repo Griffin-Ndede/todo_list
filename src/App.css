@@ -30,7 +30,7 @@ button[type=submit]{
     justify-content: space-around;
     align-items: center;
 }
-#todolist h2{
+#todolist li{
     font-size: 25px;
     font-weight: lighter;
     color: #ff4900;
@@ -50,7 +50,7 @@ button:hover{
 #delete{
     padding: 5px 15px;
     border-radius: 30px;
-    border: 1px solid black;
+    border: transparent;
     background-color: red;
     color: white;
     font-size: 15px;
