@@ -1,0 +1,58 @@
+#todo h1{
+    text-align: center;
+    color: #ff4900;
+    font-size: 40px;
+    font-weight: lighter;
+}
+
+input[type=text]{
+    text-align: center;
+    width: 250px;
+    padding: 10px;
+    border-radius: 20px;
+    border: transparent;
+    box-shadow: 4px 4px 7.5px 0.5px;
+}
+#input{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 30px; 
+}
+button[type=submit]{
+    border-radius: 20px;
+    border: transparent;
+    padding: 5px 15px;
+    box-shadow: 4px 4px 7.5px 0.5px;
+}
+#todolist{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+#todolist h2{
+    font-size: 25px;
+    font-weight: lighter;
+    color: #ff4900;
+    width: 300px;
+    overflow-wrap: break-word;  
+    word-wrap: break-word; 
+    word-break: break-word;
+
+}
+#todolist p{
+    font-size: 15px;
+
+}
+button:hover{
+    cursor: pointer;
+}
+#delete{
+    padding: 5px 15px;
+    border-radius: 30px;
+    border: 1px solid black;
+    background-color: red;
+    color: white;
+    font-size: 15px;
+
+}
